@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jake's Financial Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Jake's Financial Tracker (GitHub)</h1>
+
+    <!-- Plus Sign for Income Popup -->
+    <div class="icon" id="plusSign">+</div>
+
+    <!-- Income Popup -->
+    <div id="incomePopup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" id="closeIncomePopup">&times;</span>
+            <form id="incomeForm">
+                <h2>Add Income</h2>
+                <label for="incomeDescription">Description:</label>
+                <input type="text" id="incomeDescription" required>
+                <label for="incomeValue">Value:</label>
+                <input type="number" id="incomeValue" required>
+                <button type="submit">Add Income</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Minus Sign for Expenses Popup -->
+    <div class="icon minus-icon" id="minusSign">-</div>
+
+    <!-- Expenses Popup -->
+    <div id="expensesPopup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" id="closeExpensesPopup">&times;</span>
+            <form id="expensesForm">
+                <h2>Record Expense</h2>
+                <label for="expensesDescription">Description:</label>
+                <input type="text" id="expensesDescription" required>
+                <label for="expensesValue">Amount:</label>
+                <input type="number" id="expensesValue" required>
+                <label for="expensesAccount">Account:</label>
+                <select id="expensesAccount" required>
+                    <option value="Savings">Savings</option>
+                    <option value="Spendings" selected>Spendings</option>
+                    <option value="Bills">Bills</option>
+                </select>
+                <button type="submit" class="expense-button">Record Expense</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="financial-data">
+        <div id="savings" class="financial-group">
+            <h2>Savings</h2>
+            <p id="lastTransactionSavings">Last Transaction: Loading...</p>
+            <p id="totalSavings">Total Savings: Loading...</p>
+        </div>
+        <div id="spendings" class="financial-group">
+            <h2>Spendings</h2>
+            <p id="lastTransactionSpendings">Last Transaction: Loading...</p>
+            <p id="totalSpendings">Total Spendings: Loading...</p>
+        </div>
+        <div id="bills" class="financial-group">
+            <h2>Bills</h2>
+            <p id="lastTransactionBills">Last Transaction: Loading...</p>
+            <p id="totalBills">Total Bills: Loading...</p>
+        </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
