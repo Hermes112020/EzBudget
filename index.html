@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<div class=financialData>
+    <div id="savings">
+        <h2>Savings</h2>
+        <label for="totalSavingsPlaceholder">Total Savings:</label>
+        <input id='totalSavingsPlaceholder'class="transparent" type="text" placeholder="$Total Savings amount" disabled>
+        <br>
+        <label for="lastSavingsTransaction">Last Transaction:</label>
+        <input id="lastSavingsTransaction" class="transparent" type="text" disabled>
+    </div>
+    <div id="spendings">
+        <h2>Spendings</h2>
+        <label for="totalSpendingsPlaceholder">Total Spendings:</label>
+        <input id='totalSpendingsPlaceholder'class="transparent" type="text" placeholder="$Total Spendings amount" disabled>
+        <br>
+        <label for="lastSpendingsTransaction">Last Transaction:</label>
+        <input id="lastSpendingsTransaction" class="transparent" type="text" disabled>
+    </div>
+    <div id="bills">
+        <h2>Bills</h2>
+        <label id='billsLabel' for="totalBillsPlaceholder">Total Bills:</label>
+        <input id='totalBillsPlaceholder' class="transparent" type="text" placeholder="$Total Bills amount" disabled>
+        <br>
+        <label for="lastBillsTransaction">Last Transaction:</label>
+        <input id="lastBillsTransaction" class="transparent" type="text" disabled>
+    </div>
+</div>
+
+
+    <!-- Icon's -->
+    <div class="icon" id="reportIncomeModal">+</div>
+    <div class='icon' id="reportExpenseModal">-</div>
+
+    <!-- ### INCOME POPUP ###  -->
+    <div class="modal" id="incomeModal">
+        <div class="modal-inner">
+            <h2>RECORD NEW INCOME</h2>
+            <input type="number" step=".01" min="0">Cost</input>
+            <input type="text">Description</input>
+            <button id="closeIncomeModal">Enter</button>
+        </div>
+    </div>
+
+
+    <!-- ### EXPENSE POPUP ###  -->
+     <div class="modal" id="expenseModal">
+        <div class="modal-inner">
+            <h2>Record Expense</h2>
+
+            <label for="expenseAmount">Expense Amount:</label>
+            <input id='expenseAmount' type="number" required step="0.01">
+            <br>
+            <label for="expenseDescription">Description:</label>
+            <input id='expenseDescription' type="text" required> 
+            <br>
+            <label for="expenseAccount">Account:</label>
+            <br>
+            <select id='expenseAccount' type="text" required> 
+                <option value="Savings">Savings</option>
+                <option value="Spendings">Spendings</option>
+                <option value="Bills">Bills</option>
+            </select>
+            <br>
+            <button id='closeExpenseModal' type="submit" class="expense-button">Record Expense</button>
+            
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+
+
+</body>
+</html>
+
+
+
